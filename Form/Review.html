@@ -3,39 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Review</title>
+    <style>
+        fieldset{
+            width: 500px;
+        }
+    </style>
 </head>
 <body>
-    <fieldset>
-        <legend>Your Details:</legend>
-        <label>Name:
-            <input type="text" name="name">
-        </label><br/>
-        <label>Email:
-            <input type="email" name="email">
-        </label>
-    </fieldset>
-    <br/>
-    <fieldset>
-        <legend>Your Review:</legend>
-        <form action="http://http://www.example.com/review.php">
-            <p>How did you hear about us?
-                <select name="" id="">
+    <form action="http://http://www.example.com/review.php" method="post">
+        <fieldset>
+            <legend>Your Details:</legend>
+            <label for="name">Name:
+                <input type="text" name="name" id="name">
+            </label><br><br>
+            <label for="email">Email:
+                <input type="email" name="email" id="email">
+            </label>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend>Your Review:</legend>
+            <p>
+                <label for="ads">What device do you listen to music on?</label>
+                <select name="ads" id="ads">
                     <option value="google">Google</option>
                     <option value="facebook">Facebook</option>
                     <option value="youtube">Youtube</option>
                 </select>
             </p>
-            <p>Would you visit again?<br/>
-                <input type="radio" name="result" value="Yes">Yes
-                <input type="radio" name="result" value="No">No
-                <input type="radio" name="result" value="Maybe">Maybe
+            <p>Would you visit again?<br>
+                <input type="radio" name="result" id="yes" value="Yes">
+                <label for="yes">Yes</label>
+                <input type="radio" name="result" id="no" value="No">
+                <label for="no">No</label>
+                <input type="radio" name="result" id="maybe" value="Maybe">
+                <label for="maybe">Maybe</label>
             </p>
-            <p>Comments:<br/>
-                <textarea name="comments" id="" cols="40" rows="4">Enter your comments...</textarea>
+            <p>
+                <label for="comments">Comments:</label><br>
+                <textarea name="comments" id="comments" cols="40" rows="4">Enter your comments...</textarea>
             </p>
-            <input type="checkbox" name="signup" value="Submit">Sign me up for email updates<br/>
+            <input type="checkbox" name="signup" id="signup" value="Submit" checked="checked">
+            <label for="signup">Sign me up for email updates</label><br>
             <input type="submit" name="submit" value="Submit review">
-        </form>
-    </fieldset>
+        </fieldset>
+    </form>
 </body>
 </html>

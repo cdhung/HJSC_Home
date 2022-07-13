@@ -6,3 +6,8 @@ h1{
     height: auto;
     margin-top: 10px;
 }
+.changecolor a{
+    color: black;
+    text-decoration: none;
+}
+.changecolor a:hover{color: green}
